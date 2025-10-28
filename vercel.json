@@ -1,4 +1,10 @@
 {
   "version": 2,
-  "name": "tatestudio"
+  "name": "tatestudio",
+  "builds": [
+    {
+      "src": "**/*",
+      "use": "@vercel/static"
+    }
+  ]
 }
