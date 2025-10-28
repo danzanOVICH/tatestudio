@@ -1,0 +1,15 @@
+{
+  "name": "tatestudio",
+  "version": "1.0.0",
+  "description": "AI Tool Portal - TateStudio",
+  "main": "index.html",
+  "scripts": {
+    "start": "python3 -m http.server 8000",
+    "dev": "python3 -m http.server 8000",
+    "build": "echo 'Static site - no build needed'",
+    "deploy": "echo 'Ready for deployment'"
+  },
+  "keywords": ["ai", "tools", "portal", "video", "generation"],
+  "author": "TateStudio",
+  "license": "MIT"
+}

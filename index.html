@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>タテスタ - AI ツールポータル</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <div class="logo-icon">T</div>
+                <div class="logo-text">
+                    <h1>タテスタ</h1>
+                    <p>最新動画プロジェクト AI ツールポータル</p>
+                </div>
+            </div>
+            <div class="user-info">
+                <span>田中太郎</span>
+                <span>無料チーム</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="search-container">
+            <input type="text" class="search-input" placeholder="ツールを検索...">
+        </div>
+
+        <section class="category">
+            <h2 class="category-title">
+                <span class="category-icon">🎨</span>
+                画像・デザイン生成
+            </h2>
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <div class="tool-header">
+                        <div class="tool-icon firefly-icon">Fi</div>
+                        <div class="tool-info">
+                            <h3>Adobe Firefly</h3>
+                            <p>AI画像生成ツール（DD改良）</p>
+                        </div>
+                        <button class="favorite-btn">♡</button>
+                    </div>
+                    <button class="login-btn" onclick="openTool('https://firefly.adobe.com')">
+                        🔗 Adobe Firefly ログイン
+                    </button>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-header">
+                        <div class="tool-icon midjourney-icon">△</div>
+                        <div class="tool-info">
+                            <h3>Midjourney</h3>
+                            <p>AI画像生成プラットフォーム</p>
+                        </div>
+                        <button class="favorite-btn">♡</button>
+                    </div>
+                    <div class="tool-actions">
+                        <button class="login-btn" onclick="openTool('https://midjourney.com')">
+                            🔗 Midjourney ログイン
+                        </button>
+                        <span class="usage-status">📊 利用状況</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="category">
+            <h2 class="category-title">
+                <span class="category-icon">🎬</span>
+                動画生成・編集
+            </h2>
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <div class="tool-header">
+                        <div class="tool-icon veo-icon">V</div>
+                        <div class="tool-info">
+                            <h3>Veo2</h3>
+                            <p>Google AI動画生成ツール</p>
+                        </div>
+                        <button class="favorite-btn">♡</button>
+                    </div>
+                    <div class="tool-actions">
+                        <button class="login-btn" onclick="openTool('https://labs.google/veo')">
+                            🔗 Veo2 ログイン
+                        </button>
+                        <span class="usage-status">📊 利用状況</span>
+                    </div>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-header">
+                        <div class="tool-icon veo3-icon">V</div>
+                        <div class="tool-info">
+                            <h3>Veo3</h3>
+                            <p>Google AI動画生成ツール（最新版）</p>
+                        </div>
+                        <button class="favorite-btn">♡</button>
+                    </div>
+                    <div class="tool-actions">
+                        <button class="login-btn" onclick="openTool('https://labs.google/veo')">
+                            🔗 Veo3 ログイン
+                        </button>
+                        <span class="usage-status">📊 利用状況</span>
+                    </div>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-header">
+                        <div class="tool-icon runway-icon">R</div>
+                        <div class="tool-info">
+                            <h3>Runway</h3>
+                            <p>AI動画編集・生成プラットフォーム</p>
+                        </div>
+                        <button class="favorite-btn">♡</button>
+                    </div>
+                    <div class="tool-actions">
+                        <button class="login-btn" onclick="openTool('https://runwayml.com')">
+                            🔗 Runway ログイン
+                        </button>
+                        <span class="usage-status">📊 利用状況</span>
+                    </div>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-header">
+                        <div class="tool-icon symphony-icon">S</div>
+                        <div class="tool-info">
+                            <h3>Symphony</h3>
+                            <p>TikTok社提供動画ツール</p>
+                        </div>
+                        <button class="favorite-btn">♡</button>
+                    </div>
+                    <button class="login-btn" onclick="openTool('https://symphony.tiktok.com')">
+                        🔗 Symphony ログイン
+                    </button>
+                </div>
+            </div>
+        </section>     
+   <section class="category">
+            <h2 class="category-title">
+                <span class="category-icon">🎵</span>
+                音声・音楽生成
+            </h2>
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <div class="tool-header">
+                        <div class="tool-icon suno-icon">SUNO</div>
+                        <div class="tool-info">
+                            <h3>SUNO AI</h3>
+                            <p>AI音楽生成プラットフォーム</p>
+                        </div>
+                        <button class="favorite-btn">♡</button>
+                    </div>
+                    <div class="tool-actions">
+                        <button class="login-btn" onclick="openTool('https://suno.com')">
+                            🔗 SUNO AI ログイン
+                        </button>
+                        <span class="usage-status">📊 利用状況</span>
+                    </div>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-header">
+                        <div class="tool-icon eleven-icon">11</div>
+                        <div class="tool-info">
+                            <h3>ElevenLabs</h3>
+                            <p>AI音声合成・クローニング</p>
+                        </div>
+                        <button class="favorite-btn">♡</button>
+                    </div>
+                    <div class="tool-actions">
+                        <button class="login-btn" onclick="openTool('https://elevenlabs.io')">
+                            🔗 ElevenLabs ログイン
+                        </button>
+                        <span class="usage-status">📊 利用状況</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="category">
+            <h2 class="category-title">
+                <span class="category-icon">🤖</span>
+                AI アシスタント
+            </h2>
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <div class="tool-header">
+                        <div class="tool-icon gemini-icon">◆</div>
+                        <div class="tool-info">
+                            <h3>Google Gemini</h3>
+                            <p>Google AI アシスタント</p>
+                        </div>
+                        <button class="favorite-btn">♡</button>
+                    </div>
+                    <div class="tool-actions">
+                        <button class="login-btn" onclick="openTool('https://gemini.google.com')">
+                            🔗 Google Gemini ログイン
+                        </button>
+                        <span class="usage-status">📊 利用状況</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
