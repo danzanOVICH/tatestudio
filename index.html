@@ -28,7 +28,12 @@
 
     <main class="main">
         <div class="search-container">
-            <input type="text" class="search-input" placeholder="ツールを検索...">
+            <div class="search-row">
+                <input type="text" class="search-input" placeholder="ツールを検索...">
+                <button class="favorites-filter-btn" id="favoritesFilter" onclick="toggleFavoritesFilter()">
+                    ⭐ お気に入りのみ表示
+                </button>
+            </div>
         </div>
 
         <section class="category">
@@ -46,7 +51,7 @@
                         </div>
                         <button class="favorite-btn">♡</button>
                     </div>
-                    <button class="login-btn" onclick="openTool('https://firefly.adobe.com')">
+                    <button class="login-btn" onclick="openTool('https://firefly.adobe.com/?promoid=L3XTTKDX&locale=en-US&mv=other&mv2=tab')">
                         🔗 Adobe Firefly ログイン
                     </button>
                 </div>
@@ -61,7 +66,7 @@
                         <button class="favorite-btn">♡</button>
                     </div>
                     <div class="tool-actions">
-                        <button class="login-btn" onclick="openTool('https://midjourney.com')">
+                        <button class="login-btn" onclick="openTool('https://www.midjourney.com/explore?tab=video_top')">
                             🔗 Midjourney ログイン
                         </button>
                         <span class="usage-status">📊 利用状況</span>
@@ -80,31 +85,14 @@
                     <div class="tool-header">
                         <div class="tool-icon veo-icon">V</div>
                         <div class="tool-info">
-                            <h3>Veo2</h3>
-                            <p>Google AI動画生成ツール</p>
-                        </div>
-                        <button class="favorite-btn">♡</button>
-                    </div>
-                    <div class="tool-actions">
-                        <button class="login-btn" onclick="openTool('https://labs.google/veo')">
-                            🔗 Veo2 ログイン
-                        </button>
-                        <span class="usage-status">📊 利用状況</span>
-                    </div>
-                </div>
-
-                <div class="tool-card">
-                    <div class="tool-header">
-                        <div class="tool-icon veo3-icon">V</div>
-                        <div class="tool-info">
-                            <h3>Veo3</h3>
+                            <h3>Veo (2&3)</h3>
                             <p>Google AI動画生成ツール（最新版）</p>
                         </div>
                         <button class="favorite-btn">♡</button>
                     </div>
                     <div class="tool-actions">
-                        <button class="login-btn" onclick="openTool('https://labs.google/veo')">
-                            🔗 Veo3 ログイン
+                        <button class="login-btn" onclick="openTool('https://labs.google/fx/tools/flow')">
+                            🔗 Veo ログイン
                         </button>
                         <span class="usage-status">📊 利用状況</span>
                     </div>
@@ -120,7 +108,7 @@
                         <button class="favorite-btn">♡</button>
                     </div>
                     <div class="tool-actions">
-                        <button class="login-btn" onclick="openTool('https://runwayml.com')">
+                        <button class="login-btn" onclick="openTool('https://app.runwayml.com/video-tools/teams/ddddamworkshop01/ai-tools/generate?mode=chat')">
                             🔗 Runway ログイン
                         </button>
                         <span class="usage-status">📊 利用状況</span>
@@ -136,7 +124,7 @@
                         </div>
                         <button class="favorite-btn">♡</button>
                     </div>
-                    <button class="login-btn" onclick="openTool('https://symphony.tiktok.com')">
+                    <button class="login-btn" onclick="openTool('https://ads.tiktok.com/creative/creativestudio/create')">
                         🔗 Symphony ログイン
                     </button>
                 </div>
@@ -158,7 +146,7 @@
                         <button class="favorite-btn">♡</button>
                     </div>
                     <div class="tool-actions">
-                        <button class="login-btn" onclick="openTool('https://suno.com')">
+                        <button class="login-btn" onclick="openTool('https://suno.com/create?signup_source=splashpage&referrer=%2Fhome&redirected_from=signin')">
                             🔗 SUNO AI ログイン
                         </button>
                         <span class="usage-status">📊 利用状況</span>
@@ -175,7 +163,7 @@
                         <button class="favorite-btn">♡</button>
                     </div>
                     <div class="tool-actions">
-                        <button class="login-btn" onclick="openTool('https://elevenlabs.io')">
+                        <button class="login-btn" onclick="openTool('https://elevenlabs.io/app/home')">
                             🔗 ElevenLabs ログイン
                         </button>
                         <span class="usage-status">📊 利用状況</span>
@@ -200,7 +188,7 @@
                         <button class="favorite-btn">♡</button>
                     </div>
                     <div class="tool-actions">
-                        <button class="login-btn" onclick="openTool('https://gemini.google.com')">
+                        <button class="login-btn" onclick="openTool('https://gemini.google.com/app')">
                             🔗 Google Gemini ログイン
                         </button>
                         <span class="usage-status">📊 利用状況</span>
