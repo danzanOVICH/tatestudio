@@ -3,12 +3,38 @@
 
 const CONFIG = {
     // Login credentials for accessing the portal
-    LOGIN: {
-        email: "test@test.com",
-        password: "test123",
-        username: "田中太郎",
-        teamName: "無料チーム"
-    },
+    USERS: [
+        {
+            username: "和田",
+            email: "wada.j@dentsudigital.co.jp",
+            password: "test123"
+        },
+        {
+            username: "小坂",
+            email: "kosaka.yu@dentsudigital.co.jp",
+            password: "test123"
+        },
+        {
+            username: "山田",
+            email: "k.yamada@dentsudigital.co.jp",
+            password: "test123"
+        },
+        {
+            username: "川野",
+            email: "kawano.yo@dentsudigital.co.jp",
+            password: "test123"
+        },
+        {
+            username: "藤本",
+            email: "fujimoto.o@dentsudigital.co.jp",
+            password: "test123"
+        },
+        {
+            username: "鎌川",
+            email: "ai.kamakawa@dc1.dentsu.co.jp",
+            password: "test123"
+        }
+    ],
     
     // Session settings
     SESSION_DURATION_HOURS: 24,

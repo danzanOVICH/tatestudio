@@ -1,5 +1,5 @@
 // Load configuration
-const VALID_CREDENTIALS = CONFIG.LOGIN;
+const VALID_USERS = CONFIG.USERS;
 const SESSION_DURATION = CONFIG.SESSION_DURATION_HOURS * 60 * 60 * 1000;
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -15,14 +15,15 @@ document.addEventListener('DOMContentLoaded', function() {
         const email = document.getElementById('email').value;
         const password = document.getElementById('password').value;
         
-        if (validateCredentials(email, password)) {
+        const user = validateCredentials(email, password);
+        
+        if (user) {
             // Store login session with user info
             const sessionData = {
                 loggedIn: true,
                 timestamp: Date.now(),
-                email: email,
-                username: VALID_CREDENTIALS.username,
-                teamName: VALID_CREDENTIALS.teamName
+                email: user.email,
+                username: user.username
             };
             
             localStorage.setItem('tateStudioSession', JSON.stringify(sessionData));
@@ -36,7 +37,10 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function validateCredentials(email, password) {
-    return email === VALID_CREDENTIALS.email && password === VALID_CREDENTIALS.password;
+    // Find user in the VALID_USERS array that matches email and password
+    return VALID_USERS.find(user => 
+        user.email === email && user.password === password
+    );
 }
 
 function checkExistingSession() {

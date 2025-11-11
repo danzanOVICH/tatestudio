@@ -29,15 +29,15 @@ function checkAuthentication() {
     }
 
     // Session is valid, update user info in header
-    updateUserInfo(session.username, session.teamName);
+    updateUserInfo(session.username, session.email);
 }
 
 function redirectToLogin() {
     window.location.href = 'login.html';
 }
 
-function updateUserInfo(username, teamName) {
-    // Update username and team name if provided
+function updateUserInfo(username, email) {
+    // Update username and email if provided
     const usernameEl = document.getElementById('username');
     const teamnameEl = document.getElementById('teamname');
 
@@ -45,8 +45,8 @@ function updateUserInfo(username, teamName) {
         usernameEl.textContent = username;
     }
 
-    if (teamnameEl && teamName) {
-        teamnameEl.textContent = teamName;
+    if (teamnameEl && email) {
+        teamnameEl.textContent = email;
     }
 
     console.log('Updated user info:', username, teamName);
