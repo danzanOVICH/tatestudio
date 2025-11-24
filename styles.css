@@ -60,28 +60,91 @@ body {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    gap: 8px;
+}
+
+.user-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
     font-size: 14px;
     color: #6b7280;
-    gap: 4px;
+    gap: 2px;
+}
+
+.header-buttons {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.logout-btn,
+.users-btn {
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    letter-spacing: 0.3px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.users-btn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.users-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.users-btn:hover::before {
+    left: 100%;
 }
 
 .logout-btn {
-    background: #ef4444;
-    color: white;
-    border: none;
-    padding: 6px 12px;
-    border-radius: 4px;
-    font-size: 12px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    box-shadow: 0 2px 4px rgba(239, 68, 68, 0.2);
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.logout-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.logout-btn:hover::before {
+    left: 100%;
 }
 
 .logout-btn:hover {
-    background: #dc2626;
-    transform: translateY(-1px);
-    box-shadow: 0 4px 8px rgba(239, 68, 68, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(245, 87, 108, 0.4);
+}
+
+.users-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.logout-btn:active,
+.users-btn:active {
+    transform: translateY(0);
 }
 
 .main {
@@ -188,7 +251,7 @@ body {
         flex-direction: column;
         gap: 12px;
     }
-    
+
     .favorites-filter-btn {
         width: 100%;
         max-width: 300px;
@@ -263,7 +326,8 @@ body {
     font-size: 20px;
 }
 
-.veo-icon, .veo3-icon {
+.veo-icon,
+.veo3-icon {
     background: #4285f4;
     color: white;
 }
@@ -275,6 +339,11 @@ body {
 
 .symphony-icon {
     background: #ff0050;
+    color: white;
+}
+
+.sora-icon {
+    background: linear-gradient(135deg, #10a37f 0%, #1a7f64 100%);
     color: white;
 }
 
@@ -375,20 +444,20 @@ body {
         gap: 16px;
         text-align: center;
     }
-    
+
     .main {
         padding: 24px 16px;
     }
-    
+
     .tools-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .tool-actions {
         flex-direction: column;
         align-items: stretch;
     }
-    
+
     .login-btn {
         min-width: auto;
     }

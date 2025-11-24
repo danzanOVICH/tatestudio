@@ -5,14 +5,14 @@ document.addEventListener('DOMContentLoaded', function () {
     // Add a small delay to ensure DOM is fully loaded
     setTimeout(() => {
         checkAuthentication();
-        addLogoutButton();
     }, 100);
 });
 
 function checkAuthentication() {
+    const token = localStorage.getItem('tateStudioToken');
     const sessionData = localStorage.getItem('tateStudioSession');
 
-    if (!sessionData) {
+    if (!token || !sessionData) {
         redirectToLogin();
         return;
     }
@@ -23,6 +23,7 @@ function checkAuthentication() {
     // Check if session is still valid
     if (!session.loggedIn || (currentTime - session.timestamp) > SESSION_DURATION) {
         // Session expired
+        localStorage.removeItem('tateStudioToken');
         localStorage.removeItem('tateStudioSession');
         redirectToLogin();
         return;
@@ -30,6 +31,15 @@ function checkAuthentication() {
 
     // Session is valid, update user info in header
     updateUserInfo(session.username, session.email);
+}
+
+// Helper function to get authorization headers
+function getAuthHeaders() {
+    const token = localStorage.getItem('tateStudioToken');
+    return {
+        'Authorization': `Bearer ${token}`,
+        'Content-Type': 'application/json'
+    };
 }
 
 function redirectToLogin() {
@@ -52,44 +62,9 @@ function updateUserInfo(username, email) {
     console.log('Updated user info:', username, teamName);
 }
 
-function addLogoutButton() {
-    // Add logout button styles
-    const style = document.createElement('style');
-    style.textContent = `
-        .logout-btn {
-            background: #ef4444;
-            color: white;
-            border: none;
-            padding: 8px 16px;
-            border-radius: 6px;
-            font-size: 13px;
-            font-weight: 500;
-            cursor: pointer;
-            margin-top: 6px;
-            transition: all 0.2s ease;
-            box-shadow: 0 2px 4px rgba(239, 68, 68, 0.2);
-        }
-        
-        .logout-btn:hover {
-            background: #dc2626;
-            transform: translateY(-1px);
-            box-shadow: 0 4px 8px rgba(239, 68, 68, 0.3);
-        }
-        
-        .user-info {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-            font-size: 14px;
-            color: #6b7280;
-            gap: 2px;
-        }
-    `;
-    document.head.appendChild(style);
-}
-
 function logout() {
     if (confirm('ログアウトしますか？')) {
+        localStorage.removeItem('tateStudioToken');
         localStorage.removeItem('tateStudioSession');
         window.location.href = 'login.html';
     }
@@ -97,6 +72,7 @@ function logout() {
 
 // Global logout function for testing (can be called from browser console)
 window.forceLogout = function () {
+    localStorage.removeItem('tateStudioToken');
     localStorage.removeItem('tateStudioSession');
     window.location.href = 'login.html';
 };

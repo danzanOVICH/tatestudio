@@ -2,43 +2,13 @@
 // Change these credentials as needed
 
 const CONFIG = {
-    // Login credentials for accessing the portal
-    USERS: [
-        {
-            username: "和田",
-            email: "wada.j@dentsudigital.co.jp",
-            password: "test123"
-        },
-        {
-            username: "小坂",
-            email: "kosaka.yu@dentsudigital.co.jp",
-            password: "test123"
-        },
-        {
-            username: "山田",
-            email: "k.yamada@dentsudigital.co.jp",
-            password: "test123"
-        },
-        {
-            username: "川野",
-            email: "kawano.yo@dentsudigital.co.jp",
-            password: "test123"
-        },
-        {
-            username: "藤本",
-            email: "fujimoto.o@dentsudigital.co.jp",
-            password: "test123"
-        },
-        {
-            username: "鎌川",
-            email: "ai.kamakawa@dc1.dentsu.co.jp",
-            password: "test123"
-        }
-    ],
-    
+    // API Configuration
+    // API_BASE_URL: "http://localhost:8000",
+    API_BASE_URL: "https://hctwjxjkea6ul247hwho5uh6540nraly.lambda-url.ap-northeast-1.on.aws",
+
     // Session settings
     SESSION_DURATION_HOURS: 24,
-    
+
     // Site settings
     SITE_NAME: "タテスタ",
     SITE_DESCRIPTION: "AI ツールポータル"

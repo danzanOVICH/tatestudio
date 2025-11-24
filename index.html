@@ -19,9 +19,15 @@
                 </div>
             </div>
             <div class="user-info">
-                <span id="username">読み込み中...</span>
-                <span id="teamname">読み込み中...</span>
-                <button class="logout-btn" onclick="logout()">ログアウト</button>
+                <div class="user-details">
+                    <span id="username">読み込み中...</span>
+                    <span id="teamname">読み込み中...</span>
+                </div>
+                <div class="header-buttons">
+                    <button class="users-btn" onclick="window.location.href='users.html'" id="usersBtn">👥
+                        ユーザー管理</button>
+                    <button class="logout-btn" onclick="logout()">ログアウト</button>
+                </div>
             </div>
         </div>
     </header>
@@ -51,7 +57,8 @@
                         </div>
                         <button class="favorite-btn">♡</button>
                     </div>
-                    <button class="login-btn" onclick="openTool('https://firefly.adobe.com/?promoid=L3XTTKDX&locale=en-US&mv=other&mv2=tab')">
+                    <button class="login-btn"
+                        onclick="openTool('https://firefly.adobe.com/?promoid=L3XTTKDX&locale=en-US&mv=other&mv2=tab')">
                         🔗 Adobe Firefly ログイン
                     </button>
                 </div>
@@ -66,7 +73,8 @@
                         <button class="favorite-btn">♡</button>
                     </div>
                     <div class="tool-actions">
-                        <button class="login-btn" onclick="openTool('https://www.midjourney.com/explore?tab=video_top')">
+                        <button class="login-btn"
+                            onclick="openTool('https://www.midjourney.com/explore?tab=video_top')">
                             🔗 Midjourney ログイン
                         </button>
                         <span class="usage-status">📊 利用状況</span>
@@ -100,6 +108,23 @@
 
                 <div class="tool-card">
                     <div class="tool-header">
+                        <div class="tool-icon sora-icon">S</div>
+                        <div class="tool-info">
+                            <h3>Sora</h3>
+                            <p>OpenAI AI動画生成ツール</p>
+                        </div>
+                        <button class="favorite-btn">♡</button>
+                    </div>
+                    <div class="tool-actions">
+                        <button class="login-btn" onclick="openTool('https://sora.chatgpt.com/explore')">
+                            🔗 Sora ログイン
+                        </button>
+                        <span class="usage-status">📊 利用状況</span>
+                    </div>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-header">
                         <div class="tool-icon runway-icon">R</div>
                         <div class="tool-info">
                             <h3>Runway</h3>
@@ -108,7 +133,8 @@
                         <button class="favorite-btn">♡</button>
                     </div>
                     <div class="tool-actions">
-                        <button class="login-btn" onclick="openTool('https://app.runwayml.com/video-tools/teams/ddddamworkshop01/ai-tools/generate?mode=chat')">
+                        <button class="login-btn"
+                            onclick="openTool('https://app.runwayml.com/video-tools/teams/ddddamworkshop01/ai-tools/generate?mode=chat')">
                             🔗 Runway ログイン
                         </button>
                         <span class="usage-status">📊 利用状況</span>
@@ -124,7 +150,8 @@
                         </div>
                         <button class="favorite-btn">♡</button>
                     </div>
-                    <button class="login-btn" onclick="openTool('https://ads.tiktok.com/creative/creativestudio/create')">
+                    <button class="login-btn"
+                        onclick="openTool('https://ads.tiktok.com/creative/creativestudio/create')">
                         🔗 Symphony ログイン
                     </button>
                 </div>
@@ -146,7 +173,8 @@
                         <button class="favorite-btn">♡</button>
                     </div>
                     <div class="tool-actions">
-                        <button class="login-btn" onclick="openTool('https://suno.com/create?signup_source=splashpage&referrer=%2Fhome&redirected_from=signin')">
+                        <button class="login-btn"
+                            onclick="openTool('https://suno.com/create?signup_source=splashpage&referrer=%2Fhome&redirected_from=signin')">
                             🔗 SUNO AI ログイン
                         </button>
                         <span class="usage-status">📊 利用状況</span>
